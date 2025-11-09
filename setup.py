@@ -96,9 +96,9 @@ def setup_models():
     llama_path = models_dir / "Llama-3.2-1B-Instruct-Q4_K_M.gguf"
     if not llama_path.exists():
         success &= download_file(
-            "https://huggingface.co/lmstudio-community/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+            "https://huggingface.com/unsloth/Llama-3.1-8B-Instruct-GGUF/resolve/main/Llama-3.1-8B-Instruct-Q4_K_M.gguf",
             llama_path,
-            "Downloading LLaMA 3.2 1B (~800 MB)"
+            "Downloading LLaMA 3.1 8B (~800 MB)"
         )
     else:
         print(f"✓ LLaMA model already exists")
@@ -147,13 +147,13 @@ def update_paths():
         # Windows: use forward slashes in Python paths
         whisper_model = f"{project_dir}/whisper.cpp/models/ggml-base.en.bin".replace("\\", "/")
         whisper_exe = f"{project_dir}/whisper.cpp/build/bin/Release/whisper-cli.exe".replace("\\", "/")
-        llama_model = f"{project_dir}/models/Llama-3.2-1B-Instruct-Q4_K_M.gguf".replace("\\", "/")
+        llama_model = f"{project_dir}/models/Llama-3.1-8B-Instruct-Q4_K_M.gguf".replace("\\", "/")
         piper_model = f"{project_dir}/piper/en_US-kristin-medium.onnx".replace("\\", "/")
     else:
         # Linux/macOS: use normal paths
         whisper_model = f"{project_dir}/whisper.cpp/models/ggml-base.en.bin"
         whisper_exe = f"{project_dir}/whisper.cpp/build/bin/whisper-cli"
-        llama_model = f"{project_dir}/models/Llama-3.2-1B-Instruct-Q4_K_M.gguf"
+        llama_model = f"{project_dir}/models/Llama-3.1-8B-Instruct-Q4_K_M.gguf"
         piper_model = f"{project_dir}/piper/en_US-kristin-medium.onnx"
     
     # Update paths (handle both possible existing formats)
