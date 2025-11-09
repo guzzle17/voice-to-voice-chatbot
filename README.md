@@ -20,8 +20,8 @@
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/interactive-voice-assistant.git
-cd interactive-voice-assistant
+git clone https://github.com/guzzle17/voice-to-voice-chatbot.git
+cd voice-to-voice-chatbot
 
 # 2. Run automated setup (downloads all models)
 python3 setup.py   # or: python setup.py (Windows)
