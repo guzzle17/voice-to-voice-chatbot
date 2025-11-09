@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Models (too large for GitHub)
+*.gguf
+*.bin
+*.onnx
+*.onnx.json
+models/
+piper/
+whisper.cpp/
+
+# Audio files (generated/temporary)
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Personal config
+config.local.py
+.env
+
+# Test files
+test_*.wav
+output_*.wav
