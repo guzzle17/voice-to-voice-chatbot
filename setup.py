@@ -92,13 +92,13 @@ def setup_models():
     
     success = True
     
-    # Download LLaMA model (~800 MB)
-    llama_path = models_dir / "Llama-3.2-1B-Instruct-Q4_K_M.gguf"
+    # Download LLaMA model (~4.9 GB)
+    llama_path = models_dir / "Llama-3.1-8B-Instruct-Q4_K_M.gguf"
     if not llama_path.exists():
         success &= download_file(
             "https://huggingface.com/unsloth/Llama-3.1-8B-Instruct-GGUF/resolve/main/Llama-3.1-8B-Instruct-Q4_K_M.gguf",
             llama_path,
-            "Downloading LLaMA 3.1 8B (~800 MB)"
+            "Downloading LLaMA 3.1 8B (~4.9 GB)"
         )
     else:
         print(f"✓ LLaMA model already exists")
